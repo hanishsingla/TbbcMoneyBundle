@@ -41,13 +41,11 @@
     },
     "suggest": {
         "doctrine/doctrine-bundle": "~1.1",
-        "doctrine/orm": "~2.3"
+        "doctrine/orm": "~2.3",
+        "florianv/exchanger": "Exchanger is a PHP framework to work with currency exchange rates from various services."
     },
     "autoload": {
-        "psr-0": { "Tbbc\\MoneyBundle": "" }
-    },
-    "autoload-dev": {
-        "classmap": [ "Tests/app/AppKernel.php" ]
-    },
-    "target-dir": "Tbbc/MoneyBundle"
+        "psr-4": { "Tbbc\\MoneyBundle\\": "" },
+        "exclude-from-classmap": [ "/Tests/" ]
+    }
 }

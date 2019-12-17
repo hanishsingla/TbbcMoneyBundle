@@ -11,6 +11,7 @@ use Tbbc\MoneyBundle\Pair\RatioProviderInterface;
  * GoogleRatioProvider
  * Fetches currencies ratios from google finance currency converter
  * @author Hugues Maignol <hugues.maignol@kitpages.fr>
+ * @deprecated Google doesn't provides this api anymore
  */
 class GoogleRatioProvider implements RatioProviderInterface
 {
@@ -53,7 +54,7 @@ class GoogleRatioProvider implements RatioProviderInterface
     protected function getEndpoint($units, Currency $referenceCurrency, Currency $currency)
     {
         return sprintf(
-            'https://finance.google.com/finance/converter?a=%s&from=%s&to=%s',
+            'https://finance.google.com/bctzjpnsun/converter?a=%s&from=%s&to=%s',
             $units,
             $referenceCurrency->getCode(),
             $currency->getCode()
