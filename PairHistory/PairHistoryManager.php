@@ -108,7 +108,6 @@ class PairHistoryManager implements PairHistoryManagerInterface
      */
     public function listenSaveRatioEvent(SaveRatioEvent $event)
     {
-
         $ratioHistory = new RatioHistory();
         $ratioHistory->setReferenceCurrencyCode($event->getReferenceCurrencyCode());
         $ratioHistory->setCurrencyCode($event->getCurrencyCode());

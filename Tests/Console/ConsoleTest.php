@@ -7,8 +7,7 @@ use Tbbc\MoneyBundle\Tests\TestUtil\CommandTestCase;
 /**
  * @group functionnal
  */
-class ConsoleTest
-    extends CommandTestCase
+class ConsoleTest extends CommandTestCase
 {
     /** @var  \Symfony\Bundle\FrameworkBundle\Client */
     private $client;
@@ -18,8 +17,8 @@ class ConsoleTest
         /** @var \Symfony\Bundle\FrameworkBundle\Client client */
         $this->client = static::createClient();
 
-        $this->runCommand($this->client,'doctrine:database:create');
-        $this->runCommand($this->client,'doctrine:schema:update --force');
+        $this->runCommand($this->client, 'doctrine:database:create');
+        $this->runCommand($this->client, 'doctrine:schema:update --force');
     }
 
     public function testRunSaveRatio()

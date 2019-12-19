@@ -75,8 +75,12 @@ class Configuration implements ConfigurationInterface
                             ->requiresAtLeastOneElement()
                             ->example(array('twig'))
                             ->beforeNormalization()
-                                ->ifTrue(function($v){ return !is_array($v); })
-                                ->then(function($v){ return array($v); })
+                                ->ifTrue(function ($v) {
+                                    return !is_array($v);
+                                })
+                                ->then(function ($v) {
+                                    return array($v);
+                                })
                             ->end()
                             ->prototype('scalar')
                                 ->validate()

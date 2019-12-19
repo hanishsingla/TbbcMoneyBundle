@@ -55,7 +55,6 @@ class MoneyFormatterTest extends TestCase
         $numberFormatter->setTextAttribute(\NumberFormatter::CURRENCY_CODE, 'EUR');
         $numberFormatter->setAttribute(\NumberFormatter::FRACTION_DIGITS, 3);
         $this->assertEquals('12 345,679 €', $formatter->localizedFormatMoney($this->inputMoney, null, $numberFormatter));
-
     }
 
     public function testFormatMoneyWithDefaultSeparators()

@@ -12,8 +12,7 @@ use Doctrine\ORM\Mapping\Driver\SimplifiedXmlDriver;
 
 use DoctrineExtensions\PHPUnit\OrmTestCase;
 
-class BundleOrmTestCase
-    extends OrmTestCase
+class BundleOrmTestCase extends OrmTestCase
 {
     /**
      * @return \Doctrine\ORM\EntityManager

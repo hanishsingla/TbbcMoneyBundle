@@ -39,5 +39,4 @@ class MoneyManagerTest extends TestCase
         $money = $this->manager->createMoneyFromFloat(2.529999999999);
         $this->assertEquals(253, $money->getAmount());
     }
-
 }

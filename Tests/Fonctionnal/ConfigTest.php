@@ -15,8 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Console\Application;
 /**
  * @group functionnal
  */
-class ConfigTest
-    extends WebTestCase
+class ConfigTest extends WebTestCase
 {
     /** @var  \Symfony\Bundle\FrameworkBundle\Client */
     private $client;
@@ -96,7 +95,6 @@ class ConfigTest
         $repo = $em->getRepository('\Tbbc\MoneyBundle\Entity\RatioHistory');
         $list = $repo->findAll();
         $this->assertEquals(2, count($list));
-
     }
 
     public function testHistoryOfFetchedRatio()

@@ -11,8 +11,7 @@ use Symfony\Component\Form\PreloadedExtension;
 use Symfony\Component\Form\Test\TypeTestCase;
 use Tbbc\MoneyBundle\Form\Type\CurrencyType;
 
-class CurrencyTypeTest
-    extends TypeTestCase
+class CurrencyTypeTest extends TypeTestCase
 {
     private $currencyTypeClass = 'Tbbc\MoneyBundle\Form\Type\CurrencyType';
 
@@ -37,9 +36,9 @@ class CurrencyTypeTest
     {
         return array(
             new PreloadedExtension(
-                array(new CurrencyType(array("EUR", "USD"), "EUR")), array()
+                array(new CurrencyType(array("EUR", "USD"), "EUR")),
+                array()
             )
         );
     }
-
 }

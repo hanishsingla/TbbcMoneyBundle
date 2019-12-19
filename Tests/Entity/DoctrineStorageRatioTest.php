@@ -9,12 +9,12 @@ use PHPUnit\Framework\TestCase;
  */
 class DoctrineStorageRatioTest extends TestCase
 {
-    public function testClassExists ()
+    public function testClassExists()
     {
         $this->assertTrue(class_exists('\Tbbc\MoneyBundle\Entity\DoctrineStorageRatio'));
     }
 
-    public function testConstructor ()
+    public function testConstructor()
     {
         $dollar = new DoctrineStorageRatio('USD', 1.6);
 
@@ -22,7 +22,7 @@ class DoctrineStorageRatioTest extends TestCase
         $this->assertEquals(1.6, $dollar->getRatio());
     }
 
-    public function testProperties ()
+    public function testProperties()
     {
         $currency = new DoctrineStorageRatio();
 

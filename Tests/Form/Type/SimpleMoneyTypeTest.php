@@ -15,8 +15,7 @@ use Money\Money;
 use Tbbc\MoneyBundle\Form\Type\SimpleMoneyType;
 use Tbbc\MoneyBundle\Pair\PairManager;
 
-class SimpleMoneyTypeTest
-    extends TypeTestCase
+class SimpleMoneyTypeTest extends TypeTestCase
 {
     private $pairManager;
     private $simpleMoneyTypeClass = 'Tbbc\MoneyBundle\Form\Type\SimpleMoneyType';
@@ -77,8 +76,9 @@ class SimpleMoneyTypeTest
         $currencies = array('EUR', 'USD');
         $referenceCurrency = 'EUR';
 
-        if($this->getName() === "testBindValidDecimals")
+        if ($this->getName() === "testBindValidDecimals") {
             $decimals = 3;
+        }
 
         $this->pairManager = $this->getMockBuilder('Tbbc\MoneyBundle\Pair\PairManager')
             ->disableOriginalConstructor()
@@ -89,7 +89,8 @@ class SimpleMoneyTypeTest
 
         return array(
             new PreloadedExtension(
-                array(new SimpleMoneyType($decimals, $currencies, $referenceCurrency)), array()
+                array(new SimpleMoneyType($decimals, $currencies, $referenceCurrency)),
+                array()
             )
         );
     }
@@ -103,5 +104,4 @@ class SimpleMoneyTypeTest
         ));
         $this->assertEquals(Money::USD(125250), $form->getData());
     }
-
 }

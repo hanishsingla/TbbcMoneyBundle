@@ -60,9 +60,9 @@ class PairHistoryManagerTest extends BundleOrmTestCase
         $this->assertEquals('2012-07-08 13:00:00', $ratioList[1]["savedAt"]->format('Y-m-d H:i:s'));
         $this->assertEquals('2012-07-08 14:00:00', $ratioList[2]["savedAt"]->format('Y-m-d H:i:s'));
 
-        $ratioList = $this->pairHistoryManager->getRatioHistory('USD',new \DateTime('2012-07-08 12:30:00') , null);
+        $ratioList = $this->pairHistoryManager->getRatioHistory('USD', new \DateTime('2012-07-08 12:30:00'), null);
         $this->assertEquals(2, count($ratioList));
-        $ratioList = $this->pairHistoryManager->getRatioHistory('USD',new \DateTime('2012-07-08 12:30:00') , new \DateTime('2012-07-08 13:30:00'));
+        $ratioList = $this->pairHistoryManager->getRatioHistory('USD', new \DateTime('2012-07-08 12:30:00'), new \DateTime('2012-07-08 13:30:00'));
         $this->assertEquals(1, count($ratioList));
     }
     public function testGetRatio()

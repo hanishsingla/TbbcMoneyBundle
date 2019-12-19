@@ -52,6 +52,5 @@ class CsvStorageTest extends TestCase
             "EUR;1\nUSD;1.25\n",
             file_get_contents($this->fileName)
         );
-
     }
 }
